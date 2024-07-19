@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/booking.css">
+        <title>CRUD </title>
+        <link rel="icon" href="image/logo.png">
+    </head>
+    <body>
+        <div class="container py-5">
+            <div class="group">
+                <div class="title">
+                    <h1>CRUD System - Product</h1>
+                </div>
+
+                <div class="form" id="CreateAccount">
+                    <div class="form-group">
+                        <label>Name Product</label>
+                        <input id="nameProduct" type="text" class="form-control" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price Product</label>
+                        <input id="priceProduct" type="text" class="form-control" placeholder="Enter Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category Product</label>
+                        <input id="catProduct" type="text" class="form-control" placeholder="Enter Category" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description Product</label>
+                        <textarea id="descProduct" type="text" class="form-control" placeholder="Enter Description" required></textarea>
+                    </div>
+                    <button onclick="addProduct()" type="button" class="btn-add btn btn-warning" id="addProduct">Add Product</button>
+                    <button onclick="saveProduct()" type="button" class="edits btn btn-success" id="saveProduct"> Update Product</button>
+                </div>
+            </div>
+            <input onkeyup="searchProduct( this.value )"  class="form-control w-75 mt-5 mx-auto search" placeholder="Search">
+            <table class="styled-table my-3 m-auto">
+                <thead>
+                    <tr>
+                        <td>Index</td>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyProduct">
+                </tbody>
+            </table>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
